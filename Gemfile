@@ -8,7 +8,7 @@ gem 'mime-types', require: 'mime/types/full'
 # aws
 gem 'fog-aws'
 #images
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 gem 'rmagick'
 # notifications
 gem 'sweetify'
