@@ -1,6 +1,6 @@
 module ApplicationHelper
   def user_avatar(user)
-    if !user.nil? && user.avatar?
+    if user.present? && user.avatar?
       user.avatar.url
     else
       asset_path('sample_avatar.jpg')

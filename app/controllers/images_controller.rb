@@ -1,6 +1,6 @@
 class ImagesController < ApplicationController
-  before_action :set_event, only: [:create, :destroy]
-  before_action :set_image, only: [:destroy]
+  before_action :set_event, only: %i[create destroy]
+  before_action :set_image, only: :destroy
 
   def create
     @new_image = @event.images.build(image_params)

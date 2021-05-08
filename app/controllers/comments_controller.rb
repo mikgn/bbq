@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
-  before_action :set_event, only: [:create, :destroy] # TODO :update edit
-  before_action :set_comment, only: [:destroy] # TODO :update
+  before_action :set_event, only: %i[create destroy] # TODO :update :edit
+  before_action :set_comment, only: :destroy # TODO :update
 
   def create
     @new_comment = @event.comments.build(comment_params)
@@ -17,14 +17,14 @@ class CommentsController < ApplicationController
 
   # TODO
   #
-  #def update
-  #  if @comment.update(comment_params)
-  #    sweetalert_success t('comments.notice.updated')
-  #    redirect_to @comment
-  #  else
-  #    render :edit
-  #  end
-  #end
+  # def update
+  #   if @comment.update(comment_params)
+  #     sweetalert_success t('comments.notice.updated')
+  #     redirect_to @comment
+  #   else
+  #     render :edit
+  #   end
+  # end
 
   def destroy
     if user_can_edit?(@comment)

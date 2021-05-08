@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, except: :show
   before_action :set_user, only: :show
-  before_action :set_current_user, only: [:edit, :update]
+  before_action :set_current_user, only: %i[edit update]
 
   def show
   end
@@ -18,11 +18,11 @@ class UsersController < ApplicationController
     end
   end
 
-  #def destroy
-  #  @user.destroy
-  #  redirect_to events_path
-  #  sweetalert_success(t('users.notice.destroyed'))
-  #end
+  # def destroy
+  #   @user.destroy
+  #   redirect_to events_path
+  #   sweetalert_success(t('users.notice.destroyed'))
+  # end
 
   private
 

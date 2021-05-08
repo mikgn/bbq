@@ -1,13 +1,14 @@
-source 'https://rubygems.org'
+susource 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.2'
 
+gem 'rubocop', require: false
 # fix heroku upload after image uploader adding
 gem 'mime-types', require: 'mime/types/full'
 # aws
 gem 'fog-aws'
-#images
+# images
 gem 'carrierwave', '~> 2.0'
 gem 'rmagick'
 # notifications
@@ -20,7 +21,7 @@ gem 'devise-i18n'
 gem 'rails-i18n', '~> 6.0.0'
 # slim syntax
 gem 'slim'
-gem "slim-rails"
+gem 'slim-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3'
 # Use postgresql as the database for Active Record
@@ -34,7 +35,7 @@ gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-#gem 'jbuilder', '~> 2.7'
+# gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
