@@ -4,9 +4,6 @@ LTSGo is your event managing app.
 Create, take a look at other users events, subscribe and comment.
 <br>
 
-### On Heroku
--   App  [link](https://ltsgo-app.herokuapp.com//)
-
 ### Requirements
 
 - Ruby 2.6.2
